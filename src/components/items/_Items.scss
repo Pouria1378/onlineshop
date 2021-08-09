@@ -1,4 +1,16 @@
 .Items {
     display: flex;
     flex-direction: row;
+    .items-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .item {
+            margin: 10px;
+            width: 200px;
+            img {
+                width: 100%;
+            }
+        }
+    }
 }

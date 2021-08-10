@@ -13,6 +13,7 @@ const Items = () => {
                     <span>{item.title}</span>
                     <p>{item.price}</p>
                 </article>
+                <button className={"addToBasketButton"}>Add to basket</button>
             </div>
         )
     }

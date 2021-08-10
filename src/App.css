@@ -25,11 +25,36 @@
 }
 
 .Items .items-wrapper .item {
-  margin: 10px;
+  margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .Items .items-wrapper .item img {
   width: 100%;
+}
+
+.Items .items-wrapper .item .addToBasketButton {
+  width: 100%;
+  background-color: #f2f56b;
+  border: unset;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.Items .items-wrapper .item:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 /*# sourceMappingURL=App.css.map */

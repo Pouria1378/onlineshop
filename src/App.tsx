@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Drawer from './components/drawer/Drawer';
 import Items from './components/items/Items';
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
       <header className="App-header">
         <p>shopping cart</p>
       </header>
+      <Drawer show={false}>
+      </Drawer>
       <Items />
     </div>
   );

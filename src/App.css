@@ -37,6 +37,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 5px;
 }
 
 .Items .items-wrapper .item img {
@@ -49,12 +50,6 @@
   border: unset;
   border-radius: 8px;
   padding: 10px;
-}
-
-.Items .items-wrapper .item:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  cursor: pointer;
 }
 /*# sourceMappingURL=App.css.map */

@@ -11,6 +11,7 @@
             width: 200px;
             flex-direction: column;
             justify-content: space-between;
+            padding: 5px;
             img {
                 width: 100%;
             }
@@ -20,11 +21,14 @@
                 border: unset;
                 border-radius: $borderRadius;
                 padding: 10px;
+                cursor: pointer;
             }
-            &:hover {
-                transform: scale(1.05, 1.05);
-                transition-duration: 1s;
-            }
+            // &:hover {
+            //     transform: scale(1.01, 1.05);
+            //     transition-duration: 1s;
+            //     border: 1px solid;
+            //     box-shadow: 5px 5px 6px 0px #dfd9d9;
+            // }
         }
     }
 }

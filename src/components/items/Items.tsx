@@ -1,16 +1,19 @@
 import React from 'react';
 import items from '../../data/products.json'
 import { useBasketDispatch, basketReducersActions } from '../../store/basket';
+import { Product } from '../../types';
 
 const Items = () => {
     const basketDispatch = useBasketDispatch()
-    const addToBasket = (item: any) => {
+    const addToBasket = (item: Product) => {
         basketDispatch({ type: basketReducersActions.increment, item })
-        return 1;
     }
     const makeItems = () => {
         return items.products.map(item =>
-            <div className={"item"}>
+            <div
+                className={"item"}
+                id={item.id.toString()}
+            >
                 <article>
                     <img
                         src={`images/T-shirts/${item.id}.jpg`}

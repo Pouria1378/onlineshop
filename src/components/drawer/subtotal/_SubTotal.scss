@@ -1,0 +1,26 @@
+#SubTotalSection {
+    border-top: 1px solid black;
+    width: $drawerWidth;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    .subtotal {
+        width: $drawerWidth ;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        span {
+            padding: 20px;
+        }
+    }
+    .checkOutButoon {
+        background-color: $addToBasketButtonColor;
+        border: unset;
+        border-radius: $borderRadius;
+        margin: 15px;
+        padding: 20px;
+        width: $drawerWidth - 40px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}

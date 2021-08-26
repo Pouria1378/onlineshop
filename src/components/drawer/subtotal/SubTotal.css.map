@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,SADK,CACL,SAAS,CAAC;EACN,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,aAAa;CACjC",
+    "sources": [
+        "SubTotal.scss"
+    ],
+    "names": [],
+    "file": "SubTotal.css"
+}

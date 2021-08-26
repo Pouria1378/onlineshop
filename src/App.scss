@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+//variables 
+@import "./Variables";
+
+
+//items scss
+@import "./components/items/Items";
+
+//drawer
+@import "./components/drawer/Drawer";
+@import "./components/drawer/subtotal/SubTotal"
+

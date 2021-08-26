@@ -1,0 +1,87 @@
+#DrawerSection {
+  width: fit-content;
+  display: flex;
+  margin-left: auto;
+  .addToBasketIconWrapper{
+    position: relative;
+    img {
+      margin-right: 30px;
+      width: 25px;
+      cursor: pointer;
+    }
+    .basketStateLength {
+      position: absolute;
+      top: -15px;
+      right: 15px;
+      background-color: $addToBasketButtonColor;
+      padding: 3px;
+      border-radius: 50%;
+      width: 20px;
+    }
+  }
+  .Drawer {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: $DrawerBackGroundColor;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: $DrawerBackGroundColor;
+    .noItemFound {
+      width: $drawerWidth;
+    }
+    .item {
+      width: $drawerWidth - 40px;
+      height: 60px;
+      display: flex;
+      flex-direction: row;
+      padding: 15px;
+      font-size: 14px;
+      img {
+        height: 100%;
+      }
+      .title {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: left;
+        margin-left: 5px;
+        .actionsWrapper {
+          display: flex;
+          flex-direction: row;  
+          align-items: center;
+          .price {
+            margin-left: 10px;
+          }
+        }
+      }
+      .remove {
+        margin-left: auto;
+        cursor: pointer;
+        height: fit-content;
+      }
+      .decrement, .increment {
+        border: unset;
+        background-color: $addToBasketButtonColor;
+        cursor: pointer;
+        padding: 5px;
+        width: 25px;
+        height: 25px;
+      }
+      .decrement {
+        border-radius: 8px 0 0 8px;
+      }
+      .increment {
+        border-radius: 0 8px 8px 0;
+      }
+      .itemQty {
+        background-color: white;
+        padding: 2px 10px;
+      }
+    }
+    
+  }
+}

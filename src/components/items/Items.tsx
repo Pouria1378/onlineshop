@@ -24,7 +24,14 @@ const Items = () => {
                         alt={item.title}
                     />
                     <span>{item.title}</span>
-                    <p>{item.price}</p>
+                    <p>{`${item.currencyFormat} ${item.price}`}</p>
+                    {item.isFreeShipping &&
+                        <span
+                            className={"freeShipp"}
+                        >
+                            Free shipping
+                        </span>
+                    }
                 </article>
                 <button
                     className={"addToBasketButton"}

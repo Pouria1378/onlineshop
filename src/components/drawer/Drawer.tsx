@@ -78,7 +78,7 @@ export default function Drawer() {
     }
 
     document.addEventListener("click", function (e: any) {
-        if (!e.target.closest("#DrawerSection, .addToBasketButton") &&
+        if (!e.target.closest("#DrawerSection, .addToBasketButton, .actionsWrapper, .item") &&
             document.getElementById("Drawer")!.style.width !== "0px") {
             document.getElementById("Drawer")!.style.width = "0px"
         }

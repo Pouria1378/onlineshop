@@ -1,9 +1,9 @@
 import React from "react"
 import { basketReducersActions, useBasketDispatch, useBasketState } from "../../store/basket"
-import { DrawerProps, Item } from "../../types";
+import { Item } from "../../types";
 import SubTotal from "./subtotal/SubTotal";
 
-export default function Drawer({ children }: DrawerProps) {
+export default function Drawer() {
     let basketState = useBasketState()
     const basketDispatch = useBasketDispatch()
 
@@ -68,24 +68,56 @@ export default function Drawer({ children }: DrawerProps) {
         </div>
     ))
 
+    const toggleShowBasket = () => {
+        const width = document.getElementById("Drawer")?.style.width
+        if (width === "0px" || width === "") {
+            document.getElementById("Drawer")!.style.width = "300px"
+        } else {
+            document.getElementById("Drawer")!.style.width = "0px"
+        }
+    }
+
+    document.addEventListener("click", function (e: any) {
+        if (!e.target.closest("#DrawerSection, .addToBasketButton") &&
+            document.getElementById("Drawer")!.style.width !== "0px") {
+            document.getElementById("Drawer")!.style.width = "0px"
+        }
+    })
 
     return (
-        <div id={"Drawer"}>
-            {invoice.length ?
-                invoice
-                : <p
-                    className={"noItemFound"}
-                >
-                    no item found!
-                </p>
-            }
-            <SubTotal />
+        <div id={"DrawerSection"}>
+            <div
+                className={"addToBasketIconWrapper"}
+            >
+                <img
+                    onClick={() => toggleShowBasket()}
+                    src={"images/icons/shopping-cart.svg"}
+                    alt={"addToBasket"}
+                />
+
+                {Object.keys(basketState)?.length !== 0 &&
+                    <span
+                        className={"basketStateLength"}
+                    >
+                        {Object.keys(basketState).length}
+                    </span>
+                }
+
+            </div>
+            <div
+                id={"Drawer"}
+                className={"Drawer"}
+            >
+                {invoice.length ?
+                    invoice
+                    : <p
+                        className={"noItemFound"}
+                    >
+                        no item found!
+                    </p>
+                }
+                <SubTotal />
+            </div>
         </div>
     )
-}
-
-Drawer.defaultProps = {
-    show: false,
-    onHide: () => { },
-    children: <React.Fragment />
 }

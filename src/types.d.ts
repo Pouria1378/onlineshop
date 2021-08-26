@@ -16,9 +16,3 @@ export type Item = {
 export type ItemsContextState = {
     products: Product[]
 };
-
-
-
-export type DrawerProps = {
-    children: any
-}

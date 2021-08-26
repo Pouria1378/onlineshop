@@ -7,6 +7,10 @@ const Items = () => {
     const basketDispatch = useBasketDispatch()
     const addToBasket = (item: Item) => {
         basketDispatch({ type: basketReducersActions.increment, item })
+        const width = document.getElementById("Drawer")?.style.width
+        if (width === "0px" || width === "") {
+        }
+        document.getElementById("Drawer")!.style.width = "300px"
     }
     const makeItems = () => {
         return items.products.map(item =>

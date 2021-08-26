@@ -52,4 +52,139 @@
   padding: 10px;
   cursor: pointer;
 }
+
+#Drawer {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(229, 245, 246, 0.95);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: rgba(229, 245, 246, 0.95);
+}
+
+#Drawer .noItemFound {
+  width: 300px;
+}
+
+#Drawer .item {
+  width: 260px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 15px;
+  font-size: 14px;
+}
+
+#Drawer .item img {
+  height: 100%;
+}
+
+#Drawer .item .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  margin-left: 5px;
+}
+
+#Drawer .item .title .actionsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Drawer .item .title .actionsWrapper .price {
+  margin-left: 10px;
+}
+
+#Drawer .item .remove {
+  margin-left: auto;
+  cursor: pointer;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#Drawer .item .decrement, #Drawer .item .increment {
+  border: unset;
+  background-color: #f2f56b;
+  cursor: pointer;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+#Drawer .item .decrement {
+  border-radius: 8px 0 0 8px;
+}
+
+#Drawer .item .increment {
+  border-radius: 0 8px 8px 0;
+}
+
+#Drawer .item .itemQty {
+  background-color: white;
+  padding: 2px 10px;
+}
+
+#SubTotalSection {
+  background-color: white;
+  width: 300px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+#SubTotalSection .subtotal {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#SubTotalSection .subtotal span {
+  padding: 20px;
+}
+
+#SubTotalSection .checkOutButoon {
+  background-color: #f2f56b;
+  border: unset;
+  border-radius: 8px;
+  margin: 15px;
+  padding: 20px;
+  width: 260px;
+  font-size: 20px;
+  font-weight: 500;
+}
 /*# sourceMappingURL=App.css.map */
